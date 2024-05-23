@@ -14,6 +14,9 @@ https://github.com/ollama/ollama/blob/main/docs/api.md
 https://github.com/ollama/ollama/blob/main/docs/openai.md
 
 
+至少需要8GB的可用内存来运行7B模型，16GB来运行13B模型，以及32GB来运行33B模型。
+qwen:7b-fp16  RTX3060 12G 跑不起来
+
 ollama 量化说明
 https://github.com/ollama/ollama/blob/main/docs/import.md#quantization-reference
 ```

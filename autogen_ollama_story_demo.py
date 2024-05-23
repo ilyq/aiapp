@@ -3,7 +3,7 @@ from autogen import ConversableAgent
 local_jack_config={
     "config_list": [
   {
-    "model": "wizardlm2:7b",
+    "model": "yi:9b-chat-v1.5-q5_K_M",
     "base_url": "http://localhost:11434/v1",
     "api_key": "ollama",
   }
@@ -13,7 +13,7 @@ local_jack_config={
 local_emma_config={
     "config_list": [
   {
-    "model": "qwen:7b",
+    "model": "phi3:3.8b-mini-instruct-4k-fp16",
     "base_url": "http://localhost:11434/v1",
     "api_key": "ollama",
   }
@@ -33,4 +33,4 @@ emma = ConversableAgent(
     system_message="你的名字叫Emma，你的角色是一个中文AI文章评审员。你的任务是针对你的同事Jack所写的文章评估并提出改进建议，每次对话你都要对文章作出评估并给出修改建议。",
 )
 
-chat_result = emma.initiate_chat(jack, message="Jack，请用中文写一篇关于科学家穿遇到未来的文章。", max_turns=3)
+chat_result = emma.initiate_chat(jack, message="Jack，请用中文写一篇关于科学家穿遇到未来的文章。", max_turns=2)
